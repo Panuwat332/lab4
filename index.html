@@ -35,7 +35,7 @@
               <div class="w-1/3 bg-cover" style="background-image: url('https://cdn.pic.in.th/file/picinth/v4fy4w.jpeg')">
               </div> 
               <div class="w-2/3 p-4">
-                <h1 class="text-gray-900 font-bold text-2xl">Backpack</h1>
+                <h1 class="text-gray-900 font-bold text-2xl">Canvas Shoes</h1>
                 <p class="mt-2 text-gray-600 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit In odit exercitationem fuga id nam quia</p>
                 <div class="flex item-center mt-2">
                   <svg class="w-5 h-5 fill-current text-gray-700" viewBox="0 0 24 24">
@@ -55,8 +55,10 @@
                   </svg>
                 </div>
                 <div class="flex item-center justify-between mt-3">
-                  <h1 class="text-gray-700 font-bold text-xl">$220</h1>
-                  <button class="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">Add to Card</button>
+                  <h1 class="text-gray-700 font-bold text-xl">500</h1>
+                  <button class="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded" onclick="addItem(0)">+</button>
+                  <button class="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded" id="item-0-counter">text</button>
+                  <button class="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded" onclick="removeItem(0)">-</button>
                 </div>
               </div>
             </div>
@@ -67,7 +69,7 @@
               <div class="w-1/3 bg-cover" style="background-image: url('https://cdn.pic.in.th/file/picinth/a43639eb64235d1043705a9e28b5ded4a411f1b0_xxl-1.jpeg')">
               </div> 
               <div class="w-2/3 p-4">
-                <h1 class="text-gray-900 font-bold text-2xl">Backpack</h1>
+                <h1 class="text-gray-900 font-bold text-2xl">Hoodie</h1>
                 <p class="mt-2 text-gray-600 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit In odit exercitationem fuga id nam quia</p>
                 <div class="flex item-center mt-2">
                   <svg class="w-5 h-5 fill-current text-gray-700" viewBox="0 0 24 24">
@@ -87,8 +89,10 @@
                   </svg>
                 </div>
                 <div class="flex item-center justify-between mt-3">
-                  <h1 class="text-gray-700 font-bold text-xl">$220</h1>
-                  <button class="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">Add to Card</button>
+                  <h1 class="text-gray-700 font-bold text-xl">$320</h1>
+                  <button class="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded" onclick="addItem(1)">+</button>
+                  <button class="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded" id="item-1-counter">text</button>
+                  <button class="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded" onclick="removeItem(1)">-</button>
                 </div>
               </div>
             </div>
@@ -99,7 +103,7 @@
               <div class="w-1/3 bg-cover" style="background-image: url('https://cdn.pic.in.th/file/picinth/-0003_1.jpeg')">
               </div> 
               <div class="w-2/3 p-4">
-                <h1 class="text-gray-900 font-bold text-2xl">Backpack</h1>
+                <h1 class="text-gray-900 font-bold text-2xl">shirt</h1>
                 <p class="mt-2 text-gray-600 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit In odit exercitationem fuga id nam quia</p>
                 <div class="flex item-center mt-2">
                   <svg class="w-5 h-5 fill-current text-gray-700" viewBox="0 0 24 24">
@@ -119,8 +123,10 @@
                   </svg>
                 </div>
                 <div class="flex item-center justify-between mt-3">
-                  <h1 class="text-gray-700 font-bold text-xl">$220</h1>
-                  <button class="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">Add to Card</button>
+                  <h1 class="text-gray-700 font-bold text-xl">$420</h1>
+                  <button class="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded" onclick="addItem(2)">+</button>
+                  <button class="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded" id="item-2-counter">text</button>
+                  <button class="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded" onclick="removeItem(2)">-</button>
                 </div>
               </div>
             </div>
@@ -152,13 +158,19 @@
                 </div>
                 <div class="flex item-center justify-between mt-3">
                   <h1 class="text-gray-700 font-bold text-xl">$220</h1>
-                  <button class="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">Add to Card</button>
+                  <button class="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded" onclick="addItem(3)">+</button>
+                  <button class="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded" id="item-3-counter">text</button>
+                  <button class="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded" onclick="removeItem(3)">-</button>
                 </div>
               </div>
             </div>
           </div>
           <!-- More products... -->
         </div>
+    </div>
+    <div class="px-3 py-2 bg-gray-800 text-white uppercase rounded text-3xl text-center flex flex-row justify-between px-14">
+        <p id="TotalPrice">0</p>
+        <button class="px-3 py-2 bg-gray-800 text-white text-2xl font-bold uppercase rounded " onclick="showModal()">นโยบายการสั่งซื้อสินค้า</button>
     </div>
 
     <div class="flex items-center justify-center p-12">
@@ -201,7 +213,7 @@
                 for="subject"
                 class="mb-3 block text-base font-medium text-[#07074D]"
               >
-                Subject
+              Tel. Number
               </label>
               <input
                 type="text"
@@ -212,11 +224,26 @@
               />
             </div>
             <div class="mb-5">
+                <label
+                  for="subject"
+                  class="mb-3 block text-base font-medium text-[#07074D]"
+                >
+                Postal Address
+                </label>
+                <input
+                  type="text"
+                  name="subject"
+                  id="subject"
+                  placeholder="Enter your subject"
+                  class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                />
+              </div>
+            <div class="mb-5">
               <label
                 for="message"
                 class="mb-3 block text-base font-medium text-[#07074D]"
               >
-                Message
+                Address
               </label>
               <textarea
                 rows="4"
@@ -236,6 +263,69 @@
           </form>
         </div>
       </div>
+      <div id="modal-panel" class="relative z-10 hidden transition-opacity" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div id="modal-panel" class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
       
+        <div class="fixed inset-0 z-10 overflow-y-auto">
+            <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-2xl">
+                <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                    <div class="sm:flex sm:items-start">
+                    <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                        <h3 class="text-2xl font-semibold leading-6 text-gray-900" id="modal-title">นโยบายการสั่งซื้อสินค้า</h3>
+                        <div class="mt-2 h-60 overflow-auto text-sm border border-solid border-gray-200 rounded-sm">
+                            นโยบายการสั่งซื้อสินค้า (Puchasing Policy)
+                            1. ซื้อสินค้าและบริการของเรา
+                            ห้างหุ้นส่วนจำกัด เดอะดิจิตอลเอสทีเอ็ม (ต่อไปนี้จะเรียกว่า ‘บริษัท/เรา’) จัดจำหน่ายสินค้านำเข้าถูกต้องตามกฎหมาย รายละเอียดสินค้าที่แสดงหน้าร้านเป็นรายละเอียดที่ถูกต้องตรงตามที่ผู้ผลิตได้ให้รายละเอียดไว้ รูปภาพผลิตภัณฑ์ที่แสดงหน้าร้านใกล้เคียงความเป็นจริง แต่อาจมีสี หรือรูปแบบผิดไปจาก ผลิตภัณฑ์จริงเล็กน้อยเนื่องจากความละเอียดของอุปกรณ์แสดงผลของลูกค้า
+                            
+                            2. ขั้นตอนการสั่งซื้อสินค้า
+                            2.1 ลูกค้าสามารถเลือกซื้อสินค้าผ่านหน้าเว็บไซต์ ได้ตลอด 24 ชั่วโมง
+                            
+                            2.2 ลูกค้าสามารถเข้าดูรายละเอียดสินค้า สินค้าแต่ชนิดได้ที่หน้าเว็บไซต์ เมื่อลูกค้าพึงพอใจในสินค้า สามารถกดเลือกจำนวนสินค้าที่ต้องการ และ กดปุ่ม “หยิบใส่รถเข็น”
+                            
+                            2.3 เมื่อกระบวนการเลือกซื้อสินค้าเสร็จสิ้น ลูกค้าเข้าสู่กระบวนการชำระเงินโดยกดปุ่มรูป “รถเข็น” ที่ด้านมุมขวาบนของเว็บไซต์ จากนั้นกดปุ่ม “สั่งซื้อสินค้า” จากนั้นลูกค้าจะถูกนำเข้าสู่หน้า “ONE STEP CHECKOUT”
+                            
+                            2.4 ในหน้า “ONE STEP CHECKOUT” จะประกอบไปด้วยส่วนสำคัญ 4 ส่วนมีรายละเอียดดังนี้
+                            
+                            2.4.1 ที่อยู่สำหรับออกใบเสร็จ ลูกค้าจะต้องดำเนินการกรอกชื่อ นามสกุล อีเมล์ ที่อยู่ เบอร์โทรศัพท์ เพื่อใช้สำหรับจัดส่งสินค้า โดยข้อมูลจะถูกจัดเก็บเป็นไปตามนโยบายคุ้มครองข้อมูล
+                            2.4.2 วิธีการส่งสินค้า จะแสดงข้อมูลช่องทาง รวมถึง ค่าใช้จ่าย ที่บริษัทจะใช้ในการจัดส่งสินค้า
+                            2.4.3 วิธีการชำระเงิน ลูกค้าจะต้องทำการเลือกช่องทางในการชำระสินค้า โดยขั้นตอนเป็นไปตาม นโยบายการชำระเงิน
+                            2.4.4 Checkout Review ในส่วนนี้จะแสดงรายการสินค้าที่ทำการสั่งซื้อ มูลค่ารวมของการสั่งซื้อสินค้ารวมถึงค่าใช้จ่ายสำหรับการขนส่งสินค้า หากลูกค้ากรอก และ ตรวจสอบข้อมูลตามข้อ 2.4.1 – 2.4.4 เรียบร้อยแล้ว สามารถกดปุ่ม “ยืนยันคำสั่งซื้อ” เพื่อทำการซื้อสินค้า และเข้าสู่กระบวนการชำระเงิน
+                            2.5 กรณีชำระเงินด้วยบัตรเครดิต บัตรเดบิต และ PayPal ลูกค้าจะถูกนำเข้าสู่บริการของ PayPal
+                            
+                            2.6 กรณีชำระผ่านธนาคาร สามารถชำระเงินผ่านทางบัญชีธนาคาร กสิกรไทย ตามเลขบัญชีที่ระบุไว้ และแจ้งการชำระเงิน ผ่านทาง Line Application ID: @stmteam หรือ ผ่านทาง Messenger ที่ Facebook: https://www.facebook.com/SmallRigThailandbySTM
+                            
+                            2.7 เมื่อแจ้งชำระเงินครบถ้วนทางร้านจะยืนยันคำสั่งซื้อและกำหนดการส่งมอบไปยัง email ของลูกค้าที่ได้ลงทะเบียนไว้กับทางร้าน
+                            
+                            3. ราคาสินค้า
+                            ราคาของสินค้าที่แสดงในรายละเอียดของสินค้าแต่ละชนิด เป็นราคาสินค้ารวมภาษีมูลค่าเพิ่ม7% แต่ไม่รวมค่าใช้จ่ายอื่นๆ เช่น ค่าใช้จ่ายเพื่อการส่งมอบ
+                            
+                            4. การชำระเงิน
+                            ทางบริษัทจัดช่องทางการชำระเงินเพื่อความสะดวกแก่ลูกค้าหลายช่องทางดังนี้
+                            
+                            ชำระโดยการโอนเงินผ่านธนาคาร
+                            ชำระผ่านบัตรเครดิต บัตรเดบิต ผ่าน PayPal
+                            สำหรับรายละเอียดในการชำระเงินแต่ละประเภท สามารถศึกษาเพิ่มได้จากนโยบายการชำระเงิน
+                            
+                            5. การส่งมอบสินค้า
+                            หากท่านมีข้อเสนอแนะ หรือต้องการสอบถามข้อมูลเกี่ยวกับรายละเอียดการเก็บรวบรวม ใช้ และ/หรือเปิดเผยข้อมูลส่วนบุคคล รวมถึงการขอใช้สิทธิตามนโยบายฉบับนี้ ท่านสามารถติดต่อบริษัทได้ผ่านช่องทางดังนี้
+                            
+                            ทางบริษัท จะจัดส่งสินค้าภายใน 1 วันทำการ (หรือเร็วกว่านั้น) หลังได้รับแจ้งยืนยันการชำระเงิน โดยที่ลูกค้าสามารถตรวจสอบสถานะการสั่งซื้อได้ที่ Line Application ID: @stmteam หรือ ผ่านทาง Messenger ที่ Facebook: https://www.facebook.com/SmallRigThailandbySTM
+                            
+                            *** ศึกษารายละเอียดการส่งมอบเพิ่มเติมใน นโยบายการส่งมอบสินค้า
+                            
+                            6. การรับประกันสินค้า
+                            เพื่อให้ลูกค้ามั่นใจในสินค้าและบริการของทางเรา ทางเรามีการรับประกันความพึงพอใจ รับคืน/เปลี่ยนภายใน 7 วัน ศึกษารายละเอียดนโยบายการคืน-เปลี่ยนสินค้า
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                    <button onclick="closeModal()" type="button" class="inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 sm:ml-3 sm:w-auto">Okay</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

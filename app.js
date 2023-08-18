@@ -1,5 +1,5 @@
 currentSlideOrder = 1;
-const productPrice = [1499, 149, 59, 2];
+const productPrice = [500, 320, 420, 220];
 productList = [0, 0, 0, 0];
 totalPrice = 0;
 
@@ -42,28 +42,22 @@ function updateTotalPrice() {
     }
     if (totalPrice > 1000) {
         discount = (10/100) * totalPrice;
-        discount_text = document.getElementById('discount-text');
-        discount_text.classList.remove('hidden');
-        discount_text.innerHTML = "You save: " + "$" + discount.toLocaleString();
-    } else {
-        document.getElementById('discount-text').classList.add('hidden');
     }
     totalPrice = totalPrice - discount;
-    document.getElementById('total-price').innerHTML = "$" + totalPrice.toLocaleString();
+    document.getElementById('TotalPrice').innerHTML = "$" + totalPrice.toLocaleString();
 }
 
-function increaseItem(productId) {
+function addItem(productId) {
     productList[productId] += 1;
     updateItems()
 }
 
-function decreaseItem(productId) {
+function removeItem(productId) {
     if (productList[productId] != 0) {
         productList[productId] -= 1;
         updateItems()
     }
 }
-
 function closeModal() {
     let modal_panel = document.getElementById('modal-panel');
     modal_panel.classList.add('hidden')
